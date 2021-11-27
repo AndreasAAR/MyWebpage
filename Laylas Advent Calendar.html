@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+ <link rel="stylesheet" type="text/css" href="index.css">
+ <h1> Laylas Advent Calendar! </h1> 
+    <body>
+
+        <p>Click to see what happens today!</p>
+        
+        <script>
+        var today = new Date();
+        var date = (today.getMonth() + 1) + '-' + today.getDay();
+        var today = new Date();
+        var greeting = "";
+        if(month !== 12){
+            greeting = "Its not december yet jjagi!";
+        }    
+            function myFunction() {
+                document.getElementById("demo").innerHTML = greeting;
+        }
+        <p id="demo" onclick="myFunction()">Click me.</p>
+        </script>
+
+    </body>
