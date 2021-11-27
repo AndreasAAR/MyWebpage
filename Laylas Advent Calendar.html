@@ -5,10 +5,11 @@
     <body>
 
         <p>Click to see what happens today!</p>
-        
+        <p id="demo" onclick="myFunction()">Click me!</p>
+
         <script>
         var today = new Date();
-        var date = (today.getMonth() + 1) + '-' + today.getDay();
+        var month = (today.getMonth() + 1);
         var today = new Date();
         var greeting = "";
         if(month !== 12){
@@ -18,7 +19,7 @@
                 document.getElementById("demo").innerHTML = greeting;
         }
         </script>
-        <p id="demo" onclick="myFunction()">Click me.</p>
+      
         
     </body>
 </html>
