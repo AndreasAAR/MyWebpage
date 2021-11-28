@@ -38,8 +38,14 @@
                 the display property to block*/
                 document.getElementById('image')
                     .src = myFunction();
+                document.getElementById('left_santa')
+                    .src = "images/dancing.gif";
+                document.getElementById('right_santa')
+                    .src = "images/dancing.gif";    
                 var audio = document.getElementById("audio");
                 audio.play();  
+
+
                 document.getElementById('image')
                     .style.display = "block";
                     document.getElementById('left_santa')
@@ -106,9 +112,9 @@
 
     </p>
     <div id='image_line'>
-    <img id="image" src="" alt="christmas image" class = center />
-    <img id="left_santa" src="images/dancing.gif" alt="dancing.gif" align  ="right" class = left/>
-    <img id="right_santa" src="images/dancing.gif" alt="dancing.gif" align = "left" class = right/>
+    <img id="image" src="" alt="" class = center />
+    <img id="left_santa" src="" alt="" align  ="right" class = left/>
+    <img id="right_santa" src="" alt="" align = "left" class = right/>
     </body>
     </div>
 
