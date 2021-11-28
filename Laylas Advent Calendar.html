@@ -1,25 +1,113 @@
 <!DOCTYPE html>
 <html>
+
+ <head>
+    <style>
+        /* Set display to none for image*/
+        #image {
+            display: none;
+        }
+    </style>
+ </head>
  <link rel="stylesheet" type="text/css" href="index.css">
- <h1> Laylas Advent Calendar! </h1> 
+ <h1 style="text-align:center";>  Laylas Advent Calendar! </h1> 
     <body>
 
-        <p>Click to see what happens today!</p>
-        <p id="demo" onclick="myFunction()">Click me!</p>
-
+ 
+   
         <script>
-        var today = new Date();
-        var month = (today.getMonth() + 1);
-        var today = new Date();
-        var greeting = "";
-        if(month !== 12){
-            greeting = "Its not december yet jjagi!";
-        }    
+
             function myFunction() {
-                document.getElementById("demo").innerHTML = greeting;
-        }
+                // Getting image path by day
+                var today = new Date();
+                var month = (today.getMonth() + 1);
+                var day = (today.getDay() + 1);
+                var today = new Date();
+                var image_path = "images/" + day + 1 + ".jpg"
+                if(month != 12){
+                  image_path = "images/" + "notChristmas" +".jpg"      
+                }    
+                return image_path;
+            }
+
+            function show() {
+                /* Access image by id and change
+                the display property to block*/
+                document.getElementById('image')
+                    .src = myFunction();
+                var audio = document.getElementById("audio");
+                audio.play();  
+                document.getElementById('image')
+                    .style.display = "block";
+
+                document.getElementById('btnID')
+                    .style.display = "none";
+            }
         </script>
-      
-        
+ 
+
+
+
+    <div class="month">
+        <ul>
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <li>December<br><span style="font-size:18px">2021</span></li>
+        </ul>
+    </div>
+    
+    <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+    </ul>
+    
+    <ul class="days">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li><span class="active">10</span></li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+    </ul>
+
+    <p style="text-align:center";>    
+    <button type="button" onclick="show()" id="btnID" >
+        Click to see what happens today! 
+    </button>
+    </p>
+
+    <img id="image" src="" alt="christmas image" class = center />
+
+     
     </body>
+<div id = 'footer'>
+    <audio id="audio" src="audio/jinglebells.mp3">
+    <div style="border: 1px solid black ; padding: 8px">
+        Sorry, your browser does not support the <audio> tag used in this demo.
+    </div>
+</audio>
+</div>
+
 </html>
