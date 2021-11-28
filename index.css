@@ -15,16 +15,6 @@ body {font-family: Verdana, sans-serif;}
             background: grey;
         }
 
-        /* Set display to none for images*/
-        #left_santa {
-            display: none;
-        }
-        #right_santa {
-            display: none;
-        }
-        #image {
-            display: none;
-        }
      
 
 .center {
