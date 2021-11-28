@@ -2,21 +2,13 @@
 <html>
 
  <head>
-    <style>
-        /* Set display to none for image*/
-        #image {
-            display: none;
-        }
-    </style>
+
  </head>
  <link rel="stylesheet" type="text/css" href="index.css">
  <h1 style="text-align:center";>  Laylas Advent Calendar! </h1> 
     <body>
 
- 
-   
         <script>
-
             function myFunction() {
                 // Getting image path by day
                 var today = new Date();
@@ -38,6 +30,10 @@
                 var audio = document.getElementById("audio");
                 audio.play();  
                 document.getElementById('image')
+                    .style.display = "block";
+                    document.getElementById('left_santa')
+                    .style.display = "block";
+                    document.getElementById('right_santa')
                     .style.display = "block";
 
                 document.getElementById('btnID')
@@ -96,12 +92,15 @@
     <button class ='main_button' type="button" onclick="show()" id="btnID" >
         Click to see what happens today! 
     </button>
+
     </p>
-
+    <div id='image_line'>
     <img id="image" src="" alt="christmas image" class = center />
-
-     
+    <img id="left_santa" src="images/dancing.gif" alt="dancing.gif" align  ="right" />
+    <img id="right_santa" src="images/dancing.gif" alt="dancing.gif" align = "left" />
     </body>
+    </div>
+
 <div id = 'footer'>
     <audio id="audio" src="audio/jinglebells.mp3">
     <div style="border: 1px solid black ; padding: 8px">
