@@ -101,8 +101,8 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* Highlight the "current" day */
-.days li .active {
+.active {
   padding: 5px;
-  background: #1abc9c;
+  background: #d40d49;
   color: white !important
 }

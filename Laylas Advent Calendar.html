@@ -32,11 +32,18 @@
                 }    
                 return image_path;
             }
+
             function todays_date() {
-                for (i in Range(1,24)){
-                    document.getElementById(i).span.class = todays_date();
+                var today = new Date();
+                if (month = (today.getMonth() + 1) === 11){
+                    for (let i = 1; i <= 24; i++){
+                        if ((today.getDay() + 1) === i){
+                            document.getElementById(i).class = "active";
+                        }
+                    }
                 }
             }
+
             function show() {
                 /* Access image by id and change
                 the display property to block*/
@@ -49,7 +56,6 @@
                 var audio = document.getElementById("audio");
                 audio.play();  
 
-
                 document.getElementById('image')
                     .style.display = "block";
                     document.getElementById('left_santa')
@@ -60,6 +66,7 @@
                 document.getElementById('btnID')
                     .style.display = "none";
             }
+            
         </script>
  
 
@@ -84,30 +91,30 @@
     </ul>
     
     <ul class="days">
-        <li ><id = "1" span class="">1</span></li>
-        <li ><id = "2" span class="">2</span></li>
-        <li ><id = "3" span class="">3</span></li>
-        <li ><id = "4" span class="">4</span></li>
-        <li ><id = "5" span class="">5</span></li>
-        <li ><id = "6" span class="">6</span></li>
-        <li ><id = "7" span class="">7</span></li>
-        <li ><id = "8" span class="">8</span></li>
-        <li ><id = "9" span class="">9</span></li>
-        <li ><id = "10" span class="">10</span></li>
-        <li ><id = "11" span class="">11</span></li>
-        <li ><id = "12" span class="">12</span></li>
-        <li ><id = "13" span class="">13</span></li>
-        <li ><id = "14" span class="">14</span></li>
-        <li ><id = "15" span class="">15</span></li>
-        <li ><id = "16" span class="">16</span></li>
-        <li ><id = "17" span class="">17</span></li>
-        <li ><id = "18" span class="">18</span></li>
-        <li ><id = "19" span class="">19</span></li>
-        <li ><id = "20" span class="">20</span></li>
-        <li ><id = "21" span class="">21</span></li>
-        <li ><id = "22" span class="">22</span></li>
-        <li ><id = "22" span class="">23</span></li>
-        <li ><id = "24" span class="">24</span></li>
+        <li><id = "1" span class="">1</span></li>
+        <li><id = "2" span class="">2</span></li>
+        <li><id = "3" span class="">3</span></li>
+        <li><id = "4" span class="">4</span></li>
+        <li><id = "5" span class="">5</span></li>
+        <li><id = "6" span class="">6</span></li>
+        <li><id = "7" span class="">7</span></li>
+        <li><id = "8" span class="">8</span></li>
+        <li><id = "9" span class="">9</span></li>
+        <li><id = "10" span class="">10</span></li>
+        <li><id = "11" span class="">11</span></li>
+        <li><id = "12" span class="">12</span></li>
+        <li><id = "13" span class="">13</span></li>
+        <li><id = "14" span class="">14</span></li>
+        <li><id = "15" span class="">15</span></li>
+        <li><id = "16" span class="">16</span></li>
+        <li><id = "17" span class="">17</span></li>
+        <li><id = "18" span class="">18</span></li>
+        <li><id = "19" span class="">19</span></li>
+        <li><id = "20" span class="">20</span></li>
+        <li><id = "21" span class="">21</span></li>
+        <li><id = "22" span class="">22</span></li>
+        <li><id = "22" span class="">23</span></li>
+        <li><id = "24" span class="">24</span></li>
     </ul>
 
     <p style="text-align:center";>    
